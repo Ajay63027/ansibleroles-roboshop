@@ -1,1 +1,5 @@
 CATALOGUE_HOST: catalogue.ajay6.space
+USER_HOST: user.ajay6.space
+CART_HOST: cart.ajay6.space
+SHIPPING_HOST: shipping.ajay6.space
+PAYMENT_HOST: payment.ajay6.space
