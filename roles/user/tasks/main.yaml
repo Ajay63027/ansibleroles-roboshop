@@ -8,8 +8,6 @@
     name: common
     tasks_from: nodejs
 
-- name: Unmask user.service
-  ansible.builtin.command: systemctl unmask user.service
 
 - name: systemd setup
   include_role:
