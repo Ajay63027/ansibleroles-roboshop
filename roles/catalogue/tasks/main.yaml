@@ -22,19 +22,19 @@
   ansible.builtin.command: mongosh --host mongodb.ajay6.space --eval 'db.getMongo().getDBNames().indexOf("catalogue")'
   register: catalogue_output
   ingnore_errors: true
-  ingnore_unreacheble: true
+  ingnore_unreachable: true
 
 - name: print catalogue output
   ansible.builtin.debug:
     msg: "{{ catalogue_output }}"
   ingnore_errors: true
-  ingnore_unreacheble: true
+  ingnore_unreachable: true
 
 - name: load products
   ansible.builtin.shell: mongosh --host mongodb.ajay6.space < /app/db/master-data.js
   when: catalogue_output.stdout | int < 0
   ingnore_errors: true
-  ingnore_unreacheble: true
+  ingnore_unreachable: true
 
 - name: systemd setup
   include_role:
